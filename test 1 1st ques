@@ -1,0 +1,25 @@
+public class revstring{
+    public static void main(String[] args) {
+        try{
+            String name=new String("temple");
+            String rev=" ";
+            for(int i=name.length()-1;i>=0;i--)
+            {
+                rev+=name.charAt(i);
+            }
+            System.out.println(rev);
+
+        }
+        catch(Exception e)
+        {
+            System.out.println("invalid input");
+        }
+        
+    }
+
+}
+OUTPUT:
+PS C:\Users\nageswararao\Documents\java programms> javac revstring.java
+PS C:\Users\nageswararao\Documents\java programms> java revstring
+ elpmet
+PS C:\Users\nageswararao\Documents\java programms> 
