@@ -1,0 +1,12 @@
+public class array1st {
+    public static void main(String args[])
+    {
+        int lower=45;
+        int upper=49;
+        for(int i=lower;i<upper;i++)
+        {
+            System.out.println("[ ("+i+","+i*i+")]");
+        }
+    }
+    
+}
