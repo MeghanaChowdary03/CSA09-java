@@ -1,0 +1,58 @@
+import java.util.Scanner;
+public class sort{
+    public static void main(String args[])
+    {
+        try (Scanner scanner = new Scanner(System.in)) {
+            int n=5;
+            String arr[]={"mango","grapes","apple","banana","kiwi"};
+            System.out.println("Enter the order(Ascending-->A//Descending-->D)");
+            char ch=scanner.next().charAt(0);
+            if(ch=='a'||ch=='A')
+            {
+                for(int i=0;i<n;i++)
+                {
+                    for(int j=i+1;j<n;j++)
+                    {
+                        if(arr[i].compareTo(arr[j])>0);
+                        {
+                            String temp=arr[i];
+                            arr[i]=arr[j];
+                            arr[j]=temp;
+                        }
+                    }
+                }
+                System.out.println("The Ascending order is: ");
+                for(int i=0;i<n;i++)
+                {
+                    System.out.println(arr[i]);
+                }
+            }  
+            else if(ch=='d'||ch=='D')
+            {
+                for(int i=0;i<n;i++)
+                {
+                    for(int j=i+1;j<n;j++)
+                    {
+                        if(arr[i].compareTo(arr[j])<0)
+                        {
+                            String temp=arr[i];
+                            arr[i]=arr[j];
+                            arr[j]=temp;
+                        }
+                    }
+                }
+                System.out.println("The Descending order is: ");
+                for(int i=0;i<n;i++)
+                {
+                    System.out.println(arr[i]);
+                }
+            }
+            
+            else
+            {
+                System.out.println("invalid character");
+            }
+        }
+        
+    }
+}
