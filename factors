@@ -1,0 +1,40 @@
+class factors
+{
+    public static void main(String args[])
+    {
+        int number=100;
+        int n=4;
+        int factor=0;
+        for(int i=1;i<=number;i++)
+        {
+            if(number%i==0)
+            {
+                factor++;
+            }
+        }
+        System.out.println("Factors are: "+factor);
+        if(n<=number)
+        {
+            int nfact=0;
+            int count=0;
+            for(int i=1;i<=number;i++)
+            {
+                if(number%i==0)
+                {
+                    count++;
+                    if(count==n)
+                    {
+                        nfact=i;
+                        break;
+                    }
+                }
+            }
+            System.out.println("nth factor is: "+nfact);
+        }
+        else
+        {
+            System.out.println("invalidd");
+        }
+
+    }
+}
