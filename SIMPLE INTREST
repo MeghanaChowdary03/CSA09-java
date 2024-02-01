@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class SI
+{
+    public static void main(String args[])
+    {
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println("Enter principal amount:  ");
+            double amount=scanner.nextDouble();
+            System.out.println("enter the no.of years: ");
+            int years=scanner.nextInt();
+            System.out.println("Is he a Senior citizen(Y/Z): ");
+            char senior=scanner.next().charAt(0);
+            double roi=(senior=='Y')?0.12:0.10;
+
+            double intrest=calsi( amount, years, roi );
+            System.out.println("intrest is: "+intrest);
+        }
+        
+    }
+    public static double calsi(double amount, int years, double roi)
+    {
+        return amount*years*roi;
+    }
+}
+
+
