@@ -1,0 +1,19 @@
+public class days {
+    public static void main(String[] args)
+    {
+        int totaldays=756;
+        int years=totaldays/365;
+        int remainingdays=totaldays%365;
+        int weeks=remainingdays/7;
+        int days=remainingdays%7;
+        System.out.println(years);
+        System.out.println(weeks);
+        System.out.println(days);
+
+
+    }
+    
+}
+
+
+
