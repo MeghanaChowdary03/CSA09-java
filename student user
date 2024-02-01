@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class teaching {
+    public static void main(String args[])
+    {
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Total no.of users: ");
+        int users=scanner.nextInt();
+        System.out.println("enter Staff users:");
+        int staff=scanner.nextInt();
+        int nonteaching=staff/3;
+        System.out.println("non teaching staff are: "+nonteaching);
+        int student=users-(staff+nonteaching);
+        System.out.println(student);
+
+        scanner.close();
+
+        
+        
+
+
+
+    }
+    
+}
