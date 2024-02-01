@@ -1,0 +1,28 @@
+public class perfect
+{
+    public static void main(String[] args) {
+        
+        int upper=40;
+        int x=1;
+        int i=0;
+        while(i<upper)
+        {
+            int sum=0;
+            int y=x*x;
+            int t=y;
+            while(y!=0)
+            {
+                int rem=y%10;
+                sum=sum+rem;
+                y/=10;
+            }
+            if(sum<10)
+            {
+                System.out.println(t+" ");
+            }
+            i=x*x;
+            x++;
+           
+        }
+    }
+}
