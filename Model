@@ -1,0 +1,336 @@
+QUE 1:
+public class matrix
+{
+    public static void main(String[] args) {
+        int[][] a={{1,1,1},{2,2,2},{3,3,3}};
+        int[][] b={{1,1,1},{2,2,2},{3,3,3}};
+        int[][] res=new int[3][3];
+        for(int i=0;i<3;i++)
+        {
+            for(int j=0;j<3;j++)
+            {
+                res[i][j]=0;
+                for(int k=0;k<3;k++)
+                {
+                    res[i][j]+=a[i][k]*b[k][j];
+                }
+            }
+        }
+        for(int i=0;i<3;i++)
+        {
+            for(int j=0;j<3;j++)
+            {
+                System.out.print(res[i][j]+"  "); 
+            }
+            System.out.println();
+        }
+    }
+}
+output:
+PS C:\Users\nageswararao\Documents\java model> javac matrix.java
+PS C:\Users\nageswararao\Documents\java model> java matrix
+6  6  6     
+12  12  12  
+18  18  18  
+
+
+
+QUE 2:
+public class sum {
+    
+    public static void main(String args[]) {
+       
+        try {
+            int arr[] = {1, 2, 3, 4, 5, 6};
+            int sum = 0;
+
+            if (arr.length == 5) {
+                for (int i = 0; i < arr.length; i++) {
+                    sum = sum + arr[i];
+                }
+                System.out.println(sum);
+            } else {
+                throw new ArrayIndexOutOfBoundsException("Array length is not 5");
+            }
+
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("ArrayIndexOutOfBoundsException: " + e.getMessage());
+        }
+    }
+}
+
+OUTPUT:
+PS C:\Users\nageswararao\Documents\java model> javac sum.java
+PS C:\Users\nageswararao\Documents\java model> java sum
+ArrayIndexOutOfBoundsException: Array length is not 5
+PS C:\Users\nageswararao\Documents\java model> 
+
+
+
+QUE 3:
+public class sortalpha {
+    public static void main(String args[])
+    {
+        String str=new String("MOSQUE");
+        char[] ch=str.toCharArray();
+        for(int i=0;i<str.length()-1;i++)
+        {
+            for(int j=0;j<str.length()-i-1;j++)
+            {
+                if(ch[j]>ch[j+1])
+                {
+                    char temp=ch[j];
+                    ch[j]=ch[j+1];
+                    ch[j+1]=temp;
+                }
+            }
+            
+        }
+        System.out.println("the reversed word is: "+new String(ch));
+       
+    }
+    
+}
+
+OUTPUT:
+PS C:\Users\nageswararao\Documents\java model> javac sortalpha.java
+PS C:\Users\nageswararao\Documents\java model> java sortalpha
+the reversed word is: EMOQSU
+PS C:\Users\nageswararao\Documents\java model> 
+
+
+QUE 4:
+public class composite {
+    public static void main(String args[])
+    {
+        int[] arr={16,18,27,16,23,21,19};
+        int count=0;
+        for(int i=1;i<arr.length;i++)
+        {
+            int c=0;
+            for(int j=1;j<=100;j++)
+            {
+                if(arr[i]%j==0)
+                {
+                    c++;
+                }
+            } 
+            if(c>2)
+            {
+                count++;
+            }
+        }
+        System.out.println(count);
+       
+            
+        
+    }
+    
+}
+OUTPUT:
+8.4
+PS C:\Users\nageswararao\Documents\java model> javac composite.java
+PS C:\Users\nageswararao\Documents\java model> java composite
+4
+PS C:\Users\nageswararao\Documents\java model> 
+
+
+
+
+
+QUE 5:
+
+public class pattern {
+    public static void main(String args[])
+    {
+        for(int i=0;i<=5;i++)
+        {
+            for(int j=5-i;j>=1;j--)
+            {
+                System.out.print(" ");
+            }
+            for(int k=1;k<=5;k++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+    
+        }
+    }
+    
+}
+OUTPUT:
+PS C:\Users\nageswararao\Documents\java model> javac pattern.java
+PS C:\Users\nageswararao\Documents\java model> java pattern
+     *****
+    ***** 
+   *****  
+  *****   
+ *****    
+*****     
+PS C:\Users\nageswararao\Documents\java model> 
+
+
+
+
+QUE 6:
+public class vowcons {
+    public static void main(String[] args) {
+        String str=new String(" Engineering");
+        str=str.toLowerCase();
+        System.out.println("the vowels are: " );
+        for(int i=0;i<str.length();i++)
+        {
+            if(str.charAt(i)=='a'||str.charAt(i)=='e'||str.charAt(i)=='i'||str.charAt(i)=='o'||str.charAt(i)=='u')
+            {
+                System.out.print(str.charAt(i)+" ");
+            }
+            
+        }
+        System.out.println("the Consoents are: ");
+        for(int i=0;i<str.length();i++)
+        {
+            if(str.charAt(i)>='a'&& str.charAt(i)<='z' &&!(str.charAt(i)=='a'||str.charAt(i)=='e'||str.charAt(i)=='i'||str.charAt(i)=='o'||str.charAt(i)=='u'))
+            {
+                System.out.print(str.charAt(i)+" ");
+            }
+        }
+    }
+    
+}
+
+OUTPUT:
+PS C:\Users\nageswararao\Documents\java model> javac vowcons.java
+PS C:\Users\nageswararao\Documents\java model> java vowcons
+the vowels are: 
+e i e e i the Consoents are: 
+n g n r n g
+PS C:\Users\nageswararao\Documents\java model> 
+
+
+
+
+QUE 7:
+class romantodecimal
+{
+    public static int value(char c)
+    {
+        if(c=='I')
+            return 1;
+        else if(c=='V')
+            return 5;
+        else if(c=='X')
+            return 10;
+        else if(c=='L')
+            return 50;
+        else if(c=='C')
+            return 100;
+        else if(c=='D')
+            return 500;
+        else if(c=='M')
+            return 1000;
+        return -1;
+    }
+    public static int rtod(String s)
+    {
+        int res=0;
+        for(int i=0;i<s.length();i++)
+        {
+            int s1=value(s.charAt(i));
+            if(i+1<s.length())
+            {
+                int s2=value(s.charAt(i+1));
+                if(s1>=s2)
+                {
+                    res+=s1;
+                }
+                else{
+                    res+=s2-s1;
+                    i++;
+                }
+            }
+            else
+            {
+                res+=s1;
+            }
+        }
+        return res;
+    }
+
+    public static void main(String[] args)
+    {
+        String s="III";
+        System.out.println(rtod(s));
+    }
+}
+OUTPUT:
+PS C:\Users\nageswararao\Documents\java model> javac romantodecimal.java
+PS C:\Users\nageswararao\Documents\java model> java romantodecimal
+3
+PS C:\Users\nageswararao\Documents\java model> 
+
+
+
+
+QUE 8:
+
+class bank
+{
+    float getroi()
+    {
+        return 0;
+    }
+}
+class SBI extends bank{
+    float getroi()
+    {
+        return 8.4f;
+    }
+}
+class ICICI extends bank{
+    float getroi()
+    {
+        return 7.3f;
+    }
+}
+class AXIS extends bank
+{
+    float getroi() 
+    {
+        return 9.3f;
+    }
+}
+
+public class banking
+{
+    public static void main(String args[])
+    {
+        bank b;
+        b=new SBI();
+        System.out.println(b.getroi());
+    }
+}
+OUTPUT:
+PS C:\Users\nageswararao\Documents\java model> javac banking.java
+PS C:\Users\nageswararao\Documents\java model> java banking
+8.4
+PS C:\Users\nageswararao\Documents\java model> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
