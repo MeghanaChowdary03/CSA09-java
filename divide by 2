@@ -1,0 +1,21 @@
+public class divbytwo {
+
+public static void main(String args[])
+{
+    int s=0;
+    int n=14;
+    while(n!=0)
+    {
+        if(n%2==0)
+        {
+            n=n/2;
+        }
+        else{
+            n=n-1;
+        }
+        s=s+1;
+    }
+    System.out.println("The Sum is: "+ s);
+}
+    
+}
